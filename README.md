@@ -73,12 +73,9 @@ TEST.ALLOW_LOAD_FROM_CACHE False
 ## Device
 All our experiments are conducted on one NVIDIA GeForce RTX 3090, if you wanna run it on your own device, make sure to follow distributed training instructions in Scene-Graph-Benchmark.pytorch.
 
-## Tips
-We use the rel_nms operation provided by RU-Net and HL-Net in PredCls and SGCls to filter the predicted relation predicates, which encourages diverse prediction results.
-
 ## Acknowledgement
 
-The code is implemented based on Scene-Graph-Benchmark.pytorch.
+The code is implemented based on [Scene-Graph-Benchmark.pytorch](https://github.com/KaihuaTang/Scene-Graph-Benchmark.pytorch).
 
 ## Citation
 ```python
