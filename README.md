@@ -24,7 +24,7 @@ datasets
     |--image_data.json    
 ```
 ## The Trained Model Weights
-We provide the weights for the model. Due to random seeds and machines, they are not completely consistent with those reported in the paper, but they are within the allowable error range.
+We provide the log for the model. 
 
 | Model |	mR@20 |	mR@50 |	mR@100 |	Google Drive |
 | :--: | :--: | :--: | :--: | :--: |
@@ -32,14 +32,8 @@ We provide the weights for the model. Due to random seeds and machines, they are
 |PE-Net (SGCls) |	17.1 |	20.5 |	21.7 |	[Log Link](https://drive.google.com/file/d/14W8DsSzDDJaZmKgoGvAH2yZrds__4DqL/view?usp=drive_link "SGCls_log") |
 |PE-Net (SGDet) |	13.7 |	15.6 |	16.8 |	[Log Link](https://drive.google.com/file/d/1jCrQpX9L-F8eWKMxFdfsMcL0Lk29y3zE/view?usp=drive_link "SGDet_log") |
 
-## The Trained Model Weights
-We provide the weights for the model. Due to random seeds and machines, they are not completely consistent with those reported in the paper, but they are within the allowable error range.
-
-| Model |	mR@20 |	mR@50 |	mR@100 |	Google Drive |
-| :--: | :--: | :--: | :--: | :--: |
-|PE-Net (PredCls)	| 30.4 |	36.4 |	38.6 |	[Log Link](https://drive.google.com/file/d/1FDwhXsH2bo9RJW0DuLoPPEosQbx4hYc1/view?usp=drive_link "PredCls_log") |
-|PE-Net (SGCls) |	17.1 |	20.5 |	21.7 |	[Log Link](https://drive.google.com/file/d/14W8DsSzDDJaZmKgoGvAH2yZrds__4DqL/view?usp=drive_link "SGCls_log") |
-|PE-Net (SGDet) |	13.7 |	15.6 |	16.8 |	[Log Link](https://drive.google.com/file/d/1jCrQpX9L-F8eWKMxFdfsMcL0Lk29y3zE/view?usp=drive_link "SGDet_log") |
+## Visualization Results
+![image](https://github.com/krwzb/MSPN/assets/166114889/29c7c819-c459-4e23-b440-c56dd75b1060)
 
 ## Train
 ```python
