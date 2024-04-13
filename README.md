@@ -67,9 +67,9 @@ We provide the weights for the model. Due to random seeds and machines, they are
 
 | Model |	mR@20 |	mR@50 |	mR@100 |	Google Drive |
 | :--: | :--: | :--: | :--: | :--: |
-|PE-Net (PredCls)	| 29.8 |	35.4 |	37.6 |	Model Link | Log Link |
-|PE-Net (SGCls) |	16.8 |	20.1 |	21.4 |	Model Link | Log Link |
-|PE-Net (SGDet) |	13.5 |	15.8 |	16.2 |	Model Link | Log Link |
+|PE-Net (PredCls)	| 30.4 |	36.4 |	38.6 |	Model Link | Log Link |
+|PE-Net (SGCls) |	17.1 |	20.5 |	21.7 |	Model Link | Log Link |
+|PE-Net (SGDet) |	13.7 |	15.6 |	16.8 |	Model Link | Log Link |
 
 ## Tips
 We use the rel_nms operation provided by RU-Net and HL-Net in PredCls and SGCls to filter the predicted relation predicates, which encourages diverse prediction results.
