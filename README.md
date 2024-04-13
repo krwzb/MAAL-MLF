@@ -1,11 +1,11 @@
 # MSPN
-This repository contains the official code implementation for the paper .
+This repository contains the official code implementation for the paper Multi-Scale Prototype Network for Scene Graph Generation.
 
 ## Installation
-Check INSTALL.md for installation instructions.
+Check [INSTALL.md](https://github.com/krwzb/MSPN/blob/main/INSTALL.md) for installation instructions.
 
 ## Dataset
-Check DATASET.md for instructions of dataset preprocessing.
+Check [DATASET.md](https://github.com/krwzb/MSPN/blob/main/DATASET.md) for instructions of dataset preprocessing.
 
 Organize all the files like this:
 
@@ -74,8 +74,9 @@ We provide the weights for the model. Due to random seeds and machines, they are
 ## Tips
 We use the rel_nms operation provided by RU-Net and HL-Net in PredCls and SGCls to filter the predicted relation predicates, which encourages diverse prediction results.
 
-## Help
-Be free to contact me () if you have any questions!
+## Visualization Results
+![image](https://github.com/krwzb/MSPN/assets/166114889/29c7c819-c459-4e23-b440-c56dd75b1060)
+
 
 ## Acknowledgement
 
