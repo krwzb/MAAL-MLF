@@ -1,5 +1,5 @@
 # MSPN
-This repository contains the official code implementation for the paper Multi-Scale Prototype Network for Scene Graph Generation.
+This repository contains the official code implementation for the paper Modality-Aligned Anchor Learning for Scene Graph Generation. The full codebase will be released later.
 
 ## Installation
 Check [INSTALL.md](https://github.com/krwzb/MSPN/blob/main/INSTALL.md) for installation instructions.
@@ -28,9 +28,9 @@ We provide the log for the model.
 
 | Model |	mR@20 |	mR@50 |	mR@100 |	Google Drive |
 | :--: | :--: | :--: | :--: | :--: |
-|MSPN (PredCls)	| 30.4 |	36.4 |	38.6 |	[Log Link](https://drive.google.com/file/d/1FDwhXsH2bo9RJW0DuLoPPEosQbx4hYc1/view?usp=drive_link "PredCls_log") |
-|MSPN (SGCls) |	17.1 |	20.5 |	21.7 |	[Log Link](https://drive.google.com/file/d/14W8DsSzDDJaZmKgoGvAH2yZrds__4DqL/view?usp=drive_link "SGCls_log") |
-|MSPN (SGDet) |	13.7 |	15.6 |	16.8 |	[Log Link](https://drive.google.com/file/d/1jCrQpX9L-F8eWKMxFdfsMcL0Lk29y3zE/view?usp=drive_link "SGDet_log") |
+|MAAL (PredCls)	| 30.4 |	36.4 |	38.6 |	[Log Link](https://drive.google.com/file/d/1FDwhXsH2bo9RJW0DuLoPPEosQbx4hYc1/view?usp=drive_link "PredCls_log") |
+|MAAL (SGCls) |	17.1 |	20.5 |	21.7 |	[Log Link](https://drive.google.com/file/d/14W8DsSzDDJaZmKgoGvAH2yZrds__4DqL/view?usp=drive_link "SGCls_log") |
+|MAAL (SGDet) |	13.7 |	15.6 |	16.8 |	[Log Link](https://drive.google.com/file/d/1jCrQpX9L-F8eWKMxFdfsMcL0Lk29y3zE/view?usp=drive_link "SGDet_log") |
 
 ## Visualization Results
 ![image](https://github.com/krwzb/MSPN/assets/166114889/29c7c819-c459-4e23-b440-c56dd75b1060)
