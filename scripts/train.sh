@@ -1,9 +1,9 @@
-CUDA_VISIBLE_DEVICES=1 python MSPN/tools/relation_train_net.py \
---config-file "MSPN/configs/e2e_relation_X_101_32_8_FPN_1x.yaml" \
+CUDA_VISIBLE_DEVICES=1 python MAAL/tools/relation_train_net.py \
+--config-file "MAAL/configs/e2e_relation_X_101_32_8_FPN_1x.yaml" \
 MODEL.ROI_RELATION_HEAD.USE_GT_BOX True \
 MODEL.ROI_RELATION_HEAD.USE_GT_OBJECT_LABEL True \
 MODEL.ROI_RELATION_HEAD.PREDICT_USE_BIAS True \
-MODEL.ROI_RELATION_HEAD.PREDICTOR MSPN \
+MODEL.ROI_RELATION_HEAD.PREDICTOR MAAL \
 DTYPE "float32" \
 SOLVER.IMS_PER_BATCH 8 TEST.IMS_PER_BATCH 1 \
 SOLVER.MAX_ITER 60000 SOLVER.BASE_LR 1e-3 \
@@ -11,7 +11,7 @@ SOLVER.SCHEDULE.TYPE WarmupMultiStepLR \
 MODEL.ROI_RELATION_HEAD.BATCH_SIZE_PER_IMAGE 512 \
 SOLVER.STEPS "(28000, 48000)" SOLVER.VAL_PERIOD 30000 \
 SOLVER.CHECKPOINT_PERIOD 60000 GLOVE_DIR /home/MSPN/datasets/vg/glove \
-MODEL.PRETRAINED_DETECTOR_CKPT /home/MSPN/datasets/vg/detector_model/pretrained_faster_rcnn/model_final.pth \
-OUTPUT_DIR PENET/checkpoints/MSPN_PreCls \
+MODEL.PRETRAINED_DETECTOR_CKPT /home/MAAL/datasets/vg/detector_model/pretrained_faster_rcnn/model_final.pth \
+OUTPUT_DIR PENET/checkpoints/MAAL_PreCls \
 SOLVER.PRE_VAL False \
 SOLVER.GRAD_NORM_CLIP 5.0
