@@ -1,11 +1,11 @@
-# MSPN
+# MAAL
 This repository contains the official code implementation for the paper Modality-Aligned Anchor Learning for Scene Graph Generation. The full codebase will be released later.
 
 ## Installation
-Check [INSTALL.md](https://github.com/krwzb/MSPN/blob/main/INSTALL.md) for installation instructions.
+Check [INSTALL.md](https://github.com/krwzb/MAAL/blob/main/INSTALL.md) for installation instructions.
 
 ## Dataset
-Check [DATASET.md](https://github.com/krwzb/MSPN/blob/main/DATASET.md) for instructions of dataset preprocessing.
+Check [DATASET.md](https://github.com/krwzb/MAAL/blob/main/DATASET.md) for instructions of dataset preprocessing.
 
 Organize all the files like this:
 
@@ -33,41 +33,41 @@ We provide the log for the model.
 |MAAL (SGDet) |	13.7 |	15.6 |	16.8 |	[Log Link](https://drive.google.com/file/d/1jCrQpX9L-F8eWKMxFdfsMcL0Lk29y3zE/view?usp=drive_link "SGDet_log") |
 
 ## Visualization Results
-![image](https://github.com/krwzb/MSPN/assets/166114889/29c7c819-c459-4e23-b440-c56dd75b1060)
+![image](https://github.com/krwzb/MAAL/assets/166114889/29c7c819-c459-4e23-b440-c56dd75b1060)
 
 ## Train
 ```python
-CUDA_VISIBLE_DEVICES=1 python MSPN/tools/relation_train_net.py \
---config-file "MSPN/configs/e2e_relation_X_101_32_8_FPN_1x.yaml" \
+CUDA_VISIBLE_DEVICES=1 python MAAL/tools/relation_train_net.py \
+--config-file "MAAL/configs/e2e_relation_X_101_32_8_FPN_1x.yaml" \
 MODEL.ROI_RELATION_HEAD.USE_GT_BOX True \
 MODEL.ROI_RELATION_HEAD.USE_GT_OBJECT_LABEL True \
 MODEL.ROI_RELATION_HEAD.PREDICT_USE_BIAS True \
-MODEL.ROI_RELATION_HEAD.PREDICTOR MSPN \
+MODEL.ROI_RELATION_HEAD.PREDICTOR MAAL \
 DTYPE "float32" \
 SOLVER.IMS_PER_BATCH 8 TEST.IMS_PER_BATCH 1 \
 SOLVER.MAX_ITER 60000 SOLVER.BASE_LR 1e-3 \
 SOLVER.SCHEDULE.TYPE WarmupMultiStepLR \
 MODEL.ROI_RELATION_HEAD.BATCH_SIZE_PER_IMAGE 512 \
 SOLVER.STEPS "(28000, 48000)" SOLVER.VAL_PERIOD 30000 \
-SOLVER.CHECKPOINT_PERIOD 60000 GLOVE_DIR /home/MSPN/datasets/vg/glove \
-MODEL.PRETRAINED_DETECTOR_CKPT /home/MSPN/datasets/vg/detector_model/pretrained_faster_rcnn/model_final.pth \
-OUTPUT_DIR PENET/checkpoints/MSPN_PreCls \
+SOLVER.CHECKPOINT_PERIOD 60000 GLOVE_DIR /home/MAAL/datasets/vg/glove \
+MODEL.PRETRAINED_DETECTOR_CKPT /home/MAAL/datasets/vg/detector_model/pretrained_faster_rcnn/model_final.pth \
+OUTPUT_DIR PENET/checkpoints/MAAL_PreCls \
 SOLVER.PRE_VAL False \
 SOLVER.GRAD_NORM_CLIP 5.0
 ```
 ## Test
 ```python
-CUDA_VISIBLE_DEVICES=1 python MSPN/tools/relation_test_net.py \
+CUDA_VISIBLE_DEVICES=1 python MAAL/tools/relation_test_net.py \
 --config-file "configs/e2e_relation_X_101_32_8_FPN_1x.yaml" \
 MODEL.ROI_RELATION_HEAD.USE_GT_BOX True \
 MODEL.ROI_RELATION_HEAD.USE_GT_OBJECT_LABEL True \
-MODEL.ROI_RELATION_HEAD.PREDICTOR MSPN \
+MODEL.ROI_RELATION_HEAD.PREDICTOR MAAL \
 TEST.IMS_PER_BATCH 1 \
 DTYPE "float32" \
-GLOVE_DIR /home/MSPN/datasets/vg/glove \
-MODEL.PRETRAINED_DETECTOR_CKPT /home/MSPN/datasets/vg/detector_model/pretrained_faster_rcnn/model_final.pth \
-MODEL.WEIGHT checkpoints/MSPN_PredCls/model_final.pth \
-OUTPUT_DIR checkpoints/MSPN_PredCls \
+GLOVE_DIR /home/MAAL/datasets/vg/glove \
+MODEL.PRETRAINED_DETECTOR_CKPT /home/MAAL/datasets/vg/detector_model/pretrained_faster_rcnn/model_final.pth \
+MODEL.WEIGHT checkpoints/MAAL_PredCls/model_final.pth \
+OUTPUT_DIR checkpoints/MAAL_PredCls \
 TEST.ALLOW_LOAD_FROM_CACHE False
 ```
 ## Device
